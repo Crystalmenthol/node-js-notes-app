@@ -30,10 +30,10 @@ const removeNote = function (title) {
 
     if (notes.length > notesToKeep.length) {
         console.log(chalk.bgBlue('Note removed!'))
+        saveNotes(notesToKeep)
     } else {
         console.log(chalk.bgRed('Note not found!'))
     }
-    saveNotes(notesToKeep)
 }
 const saveNotes = function (notes) {
     const dataJSON = JSON.stringify(notes)
